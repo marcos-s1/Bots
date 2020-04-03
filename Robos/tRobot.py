@@ -1,10 +1,13 @@
 import Algorithmia
 import spacy
 
-
 def fetchContentFromWiki(term):
     entrada = {"articleName": term, "lang": 'pt'}
-    client = Algorithmia.client('simpH1sdB8f0kKgeKK+zp5KfmEE1')
+
+    f = open(r'C:\Users\Marcos\Documents\Credenciais\Algorithmia.txt')
+    client = Algorithmia.client(f.read())
+    f.close()
+
     wikiAlgorithm = client.algo('web/WikipediaParser/0.1.2')
     wikiAlgorithm.set_options(timeout=300)
     wikiContent = wikiAlgorithm.pipe(entrada).result
