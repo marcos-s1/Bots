@@ -16,9 +16,17 @@ def sanitizeContent(bruteVar):
     cleanVar = bruteVar.replace("\n",'')
     return cleanVar
 
+def breakContentIntoSentences(cleanVar):
+    nlp = spacy.load('pt_core_news_sm')
+    sent =nlp(cleanVar)
+    doc = []
+    for sent in sent.sents:
+        doc.append([sent, [sent.ents],[]])
+    return doc
 
 def ActivateBootText(bruteTerm):
     bruteVar = fetchContentFromWiki(bruteTerm)
     cleanVar = sanitizeContent(bruteVar)
-    print(cleanVar)
+    doc = breakContentIntoSentences(cleanVar)
+    print(doc[1])
 
