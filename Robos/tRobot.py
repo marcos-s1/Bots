@@ -5,6 +5,7 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson.natural_language_understanding_v1 import Features, KeywordsOptions
 
 
+# Retorna o conteudo do Wikipedia
 def fetchContentFromWiki(term):
     entrada = {"articleName": term, "lang": 'pt'}
 
@@ -18,6 +19,7 @@ def fetchContentFromWiki(term):
     return wikiContent['content']
 
 
+# Limpa o conteudo extraido
 def sanitizeContent(bruteVar):
     for character in "!@#$%*()<>:|/?=+~[]":
         bruteVar = bruteVar.replace(character, "")
@@ -25,6 +27,7 @@ def sanitizeContent(bruteVar):
     return cleanVar
 
 
+# Retorna todas as sentenças enontradas nos textos
 def breakContentIntoSentences(cleanVar):
     nlp = spacy.load('pt_core_news_sm')
     sent = nlp(cleanVar)
@@ -34,6 +37,8 @@ def breakContentIntoSentences(cleanVar):
     return doc
 
 
+# Integra o Watson e retorna um conjunto de palavras chave para
+# cada sentença fornecida
 def fethWatsonAndReturnKeywords(doc):
     # Autenticação de usuario
     authenticator = IAMAuthenticator('HZWB8HPGlrXgLPOeZN9kTPpXMK2ok0EAqGdLv9dcrIsH')
@@ -45,7 +50,7 @@ def fethWatsonAndReturnKeywords(doc):
         'https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/ed1586a0-30bb-4312-9206'
         '-97c8c883d30b')
     keyInformation = []
-    for index in range(3):
+    for index in range(10):
         response = natural_language_understanding.analyze(
             text=doc[index],
             features=Features(keywords=KeywordsOptions(sentiment=False, emotion=False, limit=5)),
@@ -54,13 +59,13 @@ def fethWatsonAndReturnKeywords(doc):
         keyWords = []
         for i in range(len(keyWordsTMP)):
             keyWords.append(keyWordsTMP[i]['text'])
-        keyInformation.append([{'sentence': doc[index]},keyWords])
+        keyInformation.append([{'sentence': doc[index]}, keyWords])
     return keyInformation
 
+
+# Ativa o robo de texto
 def ActivateBootText(bruteTerm):
     bruteVar = fetchContentFromWiki(bruteTerm)
     cleanVar = sanitizeContent(bruteVar)
     doc = breakContentIntoSentences(cleanVar)
     keyInformation = fethWatsonAndReturnKeywords(doc=doc)
-    for i in range(len(keyInformation)):
-        print(keyInformation[i])
