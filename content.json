@@ -1,0 +1,106 @@
+{
+    "SeachTerm": "Clube do Remo",
+    "prefix": "The history of ",
+    "Informations": [
+        {
+            "Sentence": "Clube do Remo",
+            "keywords": [
+                {
+                    "text": "Clube do Remo"
+                }
+            ]
+        },
+        {
+            "Sentence": "cujo acrônimo é CR é um clube esportivo brasileiro de Belém, fundado em 5 de fevereiro de 1905 como Grupo do Remo, reorganizado em 1911 e rebatizado para seu nome atual em 1914.",
+            "keywords": [
+                {
+                    "text": "clube esportivo"
+                },
+                {
+                    "text": "brasileiro de Belém"
+                },
+                {
+                    "text": "Grupo do Remo"
+                },
+                {
+                    "text": "acrônimo"
+                },
+                {
+                    "text": "nome atual"
+                },
+                {
+                    "text": "CR"
+                },
+                {
+                    "text": "fevereiro"
+                }
+            ]
+        },
+        {
+            "Sentence": "É chamado popularmente de Leão Azul, apelido que faz referência à mascote e à cor oficial da agremiação, o azul-marinho.",
+            "keywords": [
+                {
+                    "text": "Leão Azul"
+                },
+                {
+                    "text": "cor oficial da agremiação"
+                },
+                {
+                    "text": "azul-marinho"
+                },
+                {
+                    "text": "apelido"
+                },
+                {
+                    "text": "referência"
+                },
+                {
+                    "text": "mascote"
+                }
+            ]
+        },
+        {
+            "Sentence": "É proprietário do Baenão e também manda seus jogos no Mangueirão.",
+            "keywords": [
+                {
+                    "text": "jogos no"
+                },
+                {
+                    "text": "Baenão"
+                },
+                {
+                    "text": "manda"
+                },
+                {
+                    "text": "Mangueirão"
+                }
+            ]
+        },
+        {
+            "Sentence": "Seu maior adversário é o Paysandu, cujo clássico Re-Pa é tido como uma das maiores rivalidades do futebol brasileiro, disputando também o Clássico Re-Tu, contra a Tuna Luso.",
+            "keywords": [
+                {
+                    "text": "maior adversário"
+                },
+                {
+                    "text": "das maiores"
+                },
+                {
+                    "text": "rivalidades do futebol brasileiro"
+                },
+                {
+                    "text": "Clássico Re"
+                },
+                {
+                    "text": "clássico Re-Pa"
+                },
+                {
+                    "text": "Tuna Luso"
+                },
+                {
+                    "text": "Paysandu"
+                }
+            ]
+        }
+    ]
+}
