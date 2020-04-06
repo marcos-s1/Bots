@@ -1,6 +1,6 @@
 # Escoolhe o Termo do Wikipedia
 def askAndReturnSeachTerm():
-    return 'Clube do Remo'  # input("Choose a term of Wikipedia: ")
+    return 'Michael Jackson'  # input("Choose a term of Wikipedia: ")
 
 
 # Escolhe o prefixo a ser pesquisado

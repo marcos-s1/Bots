@@ -1,104 +1,91 @@
 {
-    "SeachTerm": "Clube do Remo",
+    "SeachTerm": "Michael Jackson",
     "prefix": "The history of ",
     "Informations": [
         {
-            "Sentence": "Clube do Remo",
+            "Sentence": "Michael Joseph Jackson Gary, 29 de agosto de 1958 — Los Angeles, 25 de junho de 2009 foi um cantor, compositor e dançarino estadunidense.",
             "keywords": [
                 {
-                    "text": "Clube do Remo"
+                    "text": "Michael Joseph Jackson Gary"
+                },
+                {
+                    "text": "dançarino estadunidense"
+                },
+                {
+                    "text": "agosto"
+                },
+                {
+                    "text": "Angeles"
+                },
+                {
+                    "text": "junho"
+                },
+                {
+                    "text": "cantor"
+                },
+                {
+                    "text": "compositor"
                 }
             ]
         },
         {
-            "Sentence": "cujo acrônimo é CR é um clube esportivo brasileiro de Belém, fundado em 5 de fevereiro de 1905 como Grupo do Remo, reorganizado em 1911 e rebatizado para seu nome atual em 1914.",
+            "Sentence": "Apelidado de \"",
+            "keywords": []
+        },
+        {
+            "Sentence": "Rei",
             "keywords": [
                 {
-                    "text": "clube esportivo"
-                },
-                {
-                    "text": "brasileiro de Belém"
-                },
-                {
-                    "text": "Grupo do Remo"
-                },
-                {
-                    "text": "acrônimo"
-                },
-                {
-                    "text": "nome atual"
-                },
-                {
-                    "text": "CR"
-                },
-                {
-                    "text": "fevereiro"
+                    "text": "Rei"
                 }
             ]
         },
         {
-            "Sentence": "É chamado popularmente de Leão Azul, apelido que faz referência à mascote e à cor oficial da agremiação, o azul-marinho.",
+            "Sentence": "do Pop\", ele é considerado uma das figuras culturais mais importantes do século XX e um dos maiores artistas da história da música.",
             "keywords": [
                 {
-                    "text": "Leão Azul"
+                    "text": "figuras culturais"
                 },
                 {
-                    "text": "cor oficial da agremiação"
+                    "text": "século XX"
                 },
                 {
-                    "text": "azul-marinho"
+                    "text": "dos maiores"
                 },
                 {
-                    "text": "apelido"
+                    "text": "artistas da história da música"
                 },
                 {
-                    "text": "referência"
-                },
-                {
-                    "text": "mascote"
+                    "text": "Pop"
                 }
             ]
         },
         {
-            "Sentence": "É proprietário do Baenão e também manda seus jogos no Mangueirão.",
+            "Sentence": "As contribuições de Jackson para a música, a dança e a moda, juntamente com a divulgação de sua vida pessoal, fizeram dele uma figura global na cultura popular por mais de quatro décadas.",
             "keywords": [
                 {
-                    "text": "jogos no"
+                    "text": "contribuições de Jackson"
                 },
                 {
-                    "text": "Baenão"
+                    "text": "divulgação de sua vida pessoal"
                 },
                 {
-                    "text": "manda"
+                    "text": "figura global na"
                 },
                 {
-                    "text": "Mangueirão"
-                }
-            ]
-        },
-        {
-            "Sentence": "Seu maior adversário é o Paysandu, cujo clássico Re-Pa é tido como uma das maiores rivalidades do futebol brasileiro, disputando também o Clássico Re-Tu, contra a Tuna Luso.",
-            "keywords": [
-                {
-                    "text": "maior adversário"
+                    "text": "cultura popular"
                 },
                 {
-                    "text": "das maiores"
+                    "text": "música"
                 },
                 {
-                    "text": "rivalidades do futebol brasileiro"
+                    "text": "dança"
                 },
                 {
-                    "text": "Clássico Re"
+                    "text": "moda"
                 },
                 {
-                    "text": "clássico Re-Pa"
-                },
-                {
-                    "text": "Tuna Luso"
-                },
-                {
-                    "text": "Paysandu"
+                    "text": "décadas"
                 }
             ]
         }
