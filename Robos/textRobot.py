@@ -8,21 +8,20 @@ from Robos import stateRobot
 
 
 # Retorna o conteudo do Wikipedia
-def fetchContentFromWiki(content):
+async def fetchContentFromWiki(content):
     entrada = {"articleName": content, "lang": 'pt'}
     with open(r'C:\Users\Marcos\Documents\Credenciais\credenciais.json') as json_file:
         dados = json.load(json_file)
         client = Algorithmia.client(dados["Algorithmia"])
-        print('algorithmia',dados["Algorithmia"])
     wikiAlgorithm = client.algo('web/WikipediaParser/0.1.2')
     wikiAlgorithm.set_options(timeout=300)
-    wikiContent = wikiAlgorithm.pipe(entrada).result
+    wikiContent =wikiAlgorithm.pipe(entrada).result
     return wikiContent['content']
 
 
 # Limpa o conteudo extraido
 def sanitizeContent(bruteVar):
-    for character in "!@#$%*()<>:|/?\=+~[]":
+    for character in ("!@#$%*()<>:|/?=+~[]\""):
         bruteVar = bruteVar.replace(character, "")
     cleanVar = bruteVar.replace("\n", '')
     return cleanVar
@@ -53,14 +52,12 @@ def cleanResponse(response):
 
 
 # Faz o ligin com o Watson e devolve as keywords
-def fethWatsonAndReturnKeywords(doc):
+async def fethWatsonAndReturnKeywords(doc):
     # Autenticação de usuario
     with open(r'C:\Users\Marcos\Documents\Credenciais\credenciais.json') as json_file:
         dados = json.load(json_file)
         watson_apiKey = dados["Watson_apikey"]
         watson_URL = dados["Watson_url"]
-        print('watson apikey', dados["Watson_apikey"])
-        print('watson url', dados["Watson_url"])
     authenticator = IAMAuthenticator(watson_apiKey)
     natural_language_understanding = NaturalLanguageUnderstandingV1(
         version='2019-07-12',
@@ -80,11 +77,11 @@ def fethWatsonAndReturnKeywords(doc):
 
 
 # Ativa o robo de texto
-def ActivateTextBoot():
+async def ActivateTextBoot():
     content = stateRobot.load()
-    bruteVar = fetchContentFromWiki(content=content['SeachTerm'])
+    bruteVar = await fetchContentFromWiki(content=content["SeachTerm"])
     cleanVar = sanitizeContent(bruteVar=bruteVar)
     doc = breakContentIntoSentences(cleanVar=cleanVar)
-    keyInformation = fethWatsonAndReturnKeywords(doc=doc)
+    keyInformation = await fethWatsonAndReturnKeywords(doc=doc)
     content['Informations'] = keyInformation
     stateRobot.save(content=content)

@@ -1,45 +1,39 @@
-from ibm_watson import NaturalLanguageUnderstandingV1
-from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-from ibm_watson.natural_language_understanding_v1 import Features, KeywordsOptions
-
-doc = [{'Sentence':'Michael Joseph Jackson (Gary, 29 de agosto de 1958 — Los Angeles, 25 de junho de 2009) foi um cantor, '
-       'compositor e dançarino estadunidense. '},
-       {'Sentence':'Apelidado de "Rei do Pop", ele é considerado uma das figuras culturais mais importantes do século XX e um dos '
-       'maiores artistas da história da música.'},
-       {'Sentence':'As contribuições de Jackson para a música, a dança e a moda, juntamente com a divulgação de sua vida pessoal, '
-       'fizeram dele uma figura global na cultura popular por mais de quatro décadas.'}]
+import json
+import pprint
+from googleapiclient.discovery import build
+import asyncio
+from Robos import stateRobot
 
 
-def cleanResponse(response):
-    lista = ['usage', 'language']
-    lista2 = ['relevance', 'count']
-    for i in lista:
-        del response[i]
-    for i in range(len(response['keywords'])):
-        dictionary = response['keywords'][i]
-        for j in lista2:
-            del dictionary[j]
-    return response
+def seachImagesFromCustomSeach(query):
+    import json
+    with open(r'C:\Users\Marcos\Documents\Credenciais\credenciais.json') as json_file:
+        dados = json.load(json_file)
+        key_id = dados["Google_ID"]
+        cse_id = dados["CSE_ID"]
+
+    service = build(serviceName="customsearch", version='v1', developerKey=key_id).cse()
+    res = service.list(q=query, cx = cse_id, num=2, imgSize='huge', searchType='image').execute()
+    pprint.pprint(res, indent=4)
+    arrayImages = []
+    '''for i in range(len(res["items"])):
+        arrayImages.append(res["items"][i]['link'])
+    return arrayImages'''
 
 
-# Autenticação de usuario
-authenticator = IAMAuthenticator('HZWB8HPGlrXgLPOeZN9kTPpXMK2ok0EAqGdLv9dcrIsH')
-natural_language_understanding = NaturalLanguageUnderstandingV1(
-    version='2019-07-12',
-    authenticator=authenticator
-)
-natural_language_understanding.set_service_url(
-    'https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/ed1586a0-30bb-4312-9206'
-    '-97c8c883d30b')
-informations = []
-for i in range(len(doc)):
-    response = natural_language_understanding.analyze(
-        text=doc[i]['Sentence'],
-        features=Features(keywords=KeywordsOptions(sentiment=False, emotion=False, limit=2, ))).get_result()
-    clean_response=cleanResponse(response)
-    info = dict(doc[i],**clean_response)
-    informations.append(info)
-# informations.append(response)
-for i in range(len(informations)):
-    print(informations[i],'\n\n')
-print(type(informations))
+async def fechtImagesForAllSentenes(content):
+    for i in range(len(content['Informations'])):
+        if len(content["Informations"][i]['keywords']) != 0:
+            query = content["Informations"][i]['Sentence'] + ' ' + content["Informations"][i]['keywords'][0]['text']
+        else:
+            query = content["Informations"][i]['Sentence']
+        seachImagesFromCustomSeach(query=query)
+        '''content["Informations"][i]['urlImages'] = results'''
+
+    return content
+
+
+content = stateRobot.load()
+array = asyncio.run(fechtImagesForAllSentenes(content=content))
+
+print(json.dumps(array, indent=4))

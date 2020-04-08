@@ -3,13 +3,13 @@
     "prefix": "The history of ",
     "Informations": [
         {
-            "Sentence": "Michael Joseph Jackson Gary, 29 de agosto de 1958 � Los Angeles, 25 de junho de 2009 foi um cantor, compositor e dan�arino estadunidense.",
+            "Sentence": "Michael Joseph Jackson Gary, 29 de agosto de 1958 â€” Los Angeles, 25 de junho de 2009 foi um cantor, compositor e danÃ§arino estadunidense.",
             "keywords": [
                 {
                     "text": "Michael Joseph Jackson Gary"
                 },
                 {
-                    "text": "dan�arino estadunidense"
+                    "text": "danÃ§arino estadunidense"
                 },
                 {
                     "text": "agosto"
@@ -26,48 +26,44 @@
                 {
                     "text": "compositor"
                 }
+            ],
+            "urlImages": [
+                "https://www.musicastorrent.com/wp-content/uploads/2019/05/1_xfxPh8bMlOGSmlJDRiY5yQ-250x214.jpeg",
+                "https://www.sodiscografias.com/wp-content/uploads/2019/05/1_X4bxK79xsqNE9iEMP6ltLQ.jpeg"
             ]
         },
         {
-            "Sentence": "Apelidado de \"",
-            "keywords": []
-        },
-        {
-            "Sentence": "Rei",
+            "Sentence": "Apelidado de Rei do Pop, ele Ã© considerado uma das figuras culturais mais importantes do sÃ©culo XX e um dos maiores artistas da histÃ³ria da mÃºsica.",
             "keywords": [
                 {
-                    "text": "Rei"
-                }
-            ]
-        },
-        {
-            "Sentence": "do Pop\", ele � considerado uma das figuras culturais mais importantes do s�culo XX e um dos maiores artistas da hist�ria da m�sica.",
-            "keywords": [
+                    "text": "Rei do Pop"
+                },
                 {
                     "text": "figuras culturais"
                 },
                 {
-                    "text": "s�culo XX"
+                    "text": "sÃ©culo XX"
                 },
                 {
                     "text": "dos maiores"
                 },
                 {
-                    "text": "artistas da hist�ria da m�sica"
-                },
-                {
-                    "text": "Pop"
+                    "text": "artistas da histÃ³ria da mÃºsica"
                 }
+            ],
+            "urlImages": [
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Michael_Jackson_signature.svg/1200px-Michael_Jackson_signature.svg.png",
+                "https://image.isu.pub/190111091421-6f84cf4c7e8f3b6ea042098222718366/jpg/page_1.jpg"
             ]
         },
         {
-            "Sentence": "As contribui��es de Jackson para a m�sica, a dan�a e a moda, juntamente com a divulga��o de sua vida pessoal, fizeram dele uma figura global na cultura popular por mais de quatro d�cadas.",
+            "Sentence": "As contribuiÃ§Ãµes de Jackson para a mÃºsica, a danÃ§a e a moda, juntamente com a divulgaÃ§Ã£o de sua vida pessoal, fizeram dele uma figura global na cultura popular por mais de quatro dÃ©cadas.",
             "keywords": [
                 {
-                    "text": "contribui��es de Jackson"
+                    "text": "contribuiÃ§Ãµes de Jackson"
                 },
                 {
-                    "text": "divulga��o de sua vida pessoal"
+                    "text": "divulgaÃ§Ã£o de sua vida pessoal"
                 },
                 {
                     "text": "figura global na"
@@ -76,17 +72,69 @@
                     "text": "cultura popular"
                 },
                 {
-                    "text": "m�sica"
+                    "text": "mÃºsica"
                 },
                 {
-                    "text": "dan�a"
+                    "text": "danÃ§a"
                 },
                 {
                     "text": "moda"
                 },
                 {
-                    "text": "d�cadas"
+                    "text": "dÃ©cadas"
                 }
+            ],
+            "urlImages": [
+                "https://image.isu.pub/131213020715-f47483cbb716b442974d5a94f0672136/jpg/page_1.jpg",
+                "https://avatars0.githubusercontent.com/u/10249957?s=400&v=4"
+            ]
+        },
+        {
+            "Sentence": "O oitavo filho da famÃ­lia Jackson, Michael fez sua estreia profissional em 1964, com seus irmÃ£os mais velhos, Jackie, Tito, Jermaine e Marlon, como membro do Jackson 5.",
+            "keywords": [
+                {
+                    "text": "estreia profissional"
+                },
+                {
+                    "text": "oitavo filho da famÃ­lia Jackson"
+                },
+                {
+                    "text": "membro do Jackson"
+                },
+                {
+                    "text": "Michael"
+                },
+                {
+                    "text": "irmÃ£os"
+                },
+                {
+                    "text": "Jackie"
+                },
+                {
+                    "text": "Tito"
+                },
+                {
+                    "text": "Jermaine"
+                },
+                {
+                    "text": "Marlon"
+                }
+            ],
+            "urlImages": [
+                "https://i.ytimg.com/vi/30JD7CGcKuM/maxresdefault.jpg",
+                "https://spartacusbrasil.com/_files/200000763-8c6d28c6d6/450/Image8-53.jpg"
+            ]
+        },
+        {
+            "Sentence": "Ele iniciou sua carreira",
+            "keywords": [
+                {
+                    "text": "carreira"
+                }
+            ],
+            "urlImages": [
+                "https://i.pinimg.com/originals/81/15/49/81154940a390424d72e6bd6c4f4b6154.jpg",
+                "https://miro.medium.com/max/9216/1*VXbEoYIvNxU92uwT7B-rzA.jpeg"
             ]
         }
     ]
