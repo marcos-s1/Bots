@@ -6,9 +6,9 @@ from Robos import ImageRobot
 
 
 async def start():
-    content = {'SeachTerm': askAndReturnSeachTerm(), 'prefix': askAndReturnPrefix()}
-    stateRobot.save(content)
-    await textRobot.ActivateTextBoot()
+    #content = {'SeachTerm': askAndReturnSeachTerm(), 'prefix': askAndReturnPrefix()}
+    #stateRobot.save(content)
+    #await textRobot.ActivateTextBoot()
     await ImageRobot.ActivateImageBoot()
 
 

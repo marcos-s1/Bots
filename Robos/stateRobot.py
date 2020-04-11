@@ -7,5 +7,5 @@ def save(content):
 
 
 def load():
-    with open(file='content.json', mode='r') as f:
+    with open(file='content.json', mode='r', encoding='utf8') as f:
         return json.load(fp=f)
