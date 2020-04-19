@@ -1,4 +1,4 @@
-# Boots
+# Bots
 
 A ideia é implementar um robo que irão pesquisar conteudo na web, filtrar as sentenças e encontrar palavras chaves sobre o assunto.
 Diante disso, Um segundo robo vai fazer uma pesquisa na web sobre o conteudo e baixará e imagens.
