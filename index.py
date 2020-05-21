@@ -4,11 +4,12 @@ from Robos.inputRobot import askAndReturnPrefix, askAndReturnSeachTerm
 
 
 async def start():
-    #content = {'SeachTerm': askAndReturnSeachTerm(), 'prefix': askAndReturnPrefix()}
-    #stateRobot.save(content)
-    #await textRobot.ActivateTextBoot()
-    #await ImageRobot.ActivateImageBoot()
+    content = {'SeachTerm': askAndReturnSeachTerm(), 'prefix': askAndReturnPrefix()}
+    stateRobot.save(content)
+    await textRobot.ActivateTextBoot()
+    await ImageRobot.ActivateImageBoot()
     VideoRobot.ActivateVideoRobot()
 
 
 asyncio.run(start())
+

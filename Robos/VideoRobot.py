@@ -2,7 +2,6 @@ import os
 from random import randint
 from PIL import Image, ImageDraw, ImageFont
 from PIL.ImageFilter import BLUR
-
 from Robos import stateRobot
 import subprocess
 
@@ -168,14 +167,17 @@ def renderVideoWithAfterEfects():
 
     print("Iniciando After Efects . . .")
 
-    aerender = subprocess.run([aerenderFilePath,
-                               '-comp', 'main',
-                               '-project', templateFilePath,
-                               '-output', destinationFilePath])
+    subprocess.run([aerenderFilePath,
+                    '-comp', 'main',
+                    '-project', templateFilePath,
+                    '-output', destinationFilePath])
+    subprocess.run([aerenderFilePath,'-close'])
+    print("\n After Effects finalizado")
 
 
 def ActivateVideoRobot():
     content = stateRobot.load()
+
     convertAllImages(content=content)
     createAllSentenceImages(content=content)
     createAfterEfetctsScript(content=content)

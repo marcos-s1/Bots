@@ -68,7 +68,9 @@ def fechtImagesForAllSentenes(content):
 
 async def ActivateImageBoot():
     content = stateRobot.load()
+
     fechtImagesForAllSentenes(content=content)
     await downloadAllImages(content=content)
+
     os.chdir(r'C:\Users\Marcos\Documents\Bots')
     stateRobot.save(content=content)
