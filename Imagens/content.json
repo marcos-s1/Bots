@@ -1,0 +1,161 @@
+{
+    "SeachTerm": "Michael Jackson",
+    "prefix": "The history of ",
+    "Informations": [
+        {
+            "Sentence": "Michael Joseph Jackson Gary, 29 de agosto de 1958 — Los Angeles, 25 de junho de 2009 foi um cantor, compositor e dançarino estadunidense.",
+            "keywords": [
+                {
+                    "text": "Michael Joseph Jackson Gary"
+                },
+                {
+                    "text": "dançarino estadunidense"
+                },
+                {
+                    "text": "agosto"
+                },
+                {
+                    "text": "Angeles"
+                },
+                {
+                    "text": "junho"
+                },
+                {
+                    "text": "cantor"
+                },
+                {
+                    "text": "compositor"
+                }
+            ]
+        },
+        {
+            "Sentence": "Apelidado de Rei do Pop, ele é considerado uma das figuras culturais mais importantes de todos os tempos e um dos maiores artistas da história da música, além de ter sido um grande humanitário.",
+            "keywords": [
+                {
+                    "text": "Rei do Pop"
+                },
+                {
+                    "text": "figuras culturais"
+                },
+                {
+                    "text": "dos maiores"
+                },
+                {
+                    "text": "artistas da história da música"
+                },
+                {
+                    "text": "grande humanitário"
+                }
+            ]
+        },
+        {
+            "Sentence": "As contribuições de Jackson para a música, a dança e a moda, juntamente com a divulgação de sua vida pessoal, fizeram dele uma figura global na cultura popular por mais de quatro décadas.",
+            "keywords": [
+                {
+                    "text": "contribuições de Jackson"
+                },
+                {
+                    "text": "divulgação de sua vida pessoal"
+                },
+                {
+                    "text": "figura global na"
+                },
+                {
+                    "text": "cultura popular"
+                },
+                {
+                    "text": "música"
+                },
+                {
+                    "text": "dança"
+                },
+                {
+                    "text": "moda"
+                },
+                {
+                    "text": "décadas"
+                }
+            ]
+        },
+        {
+            "Sentence": "O oitavo filho da família Jackson, Michael fez sua estreia profissional em 1964, com seus irmãos mais velhos, Jackie, Tito, Jermaine e Marlon, como membro do Jackson 5.",
+            "keywords": [
+                {
+                    "text": "estreia profissional"
+                },
+                {
+                    "text": "oitavo filho da família Jackson"
+                },
+                {
+                    "text": "membro do Jackson"
+                },
+                {
+                    "text": "Michael"
+                },
+                {
+                    "text": "irmãos"
+                },
+                {
+                    "text": "Jackie"
+                },
+                {
+                    "text": "Tito"
+                },
+                {
+                    "text": "Jermaine"
+                },
+                {
+                    "text": "Marlon"
+                }
+            ]
+        },
+        {
+            "Sentence": "Ele iniciou sua carreira",
+            "keywords": [
+                {
+                    "text": "carreira"
+                }
+            ]
+        },
+        {
+            "Sentence": "solo em 1971, na Motown Records, e subiu para estrelato solo com Off the Wall 1979, que foi aclamado pela crítica.",
+            "keywords": [
+                {
+                    "text": "Motown Records"
+                },
+                {
+                    "text": "estrelato solo"
+                },
+                {
+                    "text": "solo"
+                },
+                {
+                    "text": "Off the Wall"
+                },
+                {
+                    "text": "crítica"
+                }
+            ]
+        },
+        {
+            "Sentence": "No início dos anos 1980, Jackson se tornou uma figura dominante na música popular.",
+            "keywords": [
+                {
+                    "text": "início dos anos"
+                },
+                {
+                    "text": "figura dominante"
+                },
+                {
+                    "text": "na música"
+                },
+                {
+                    "text": "Jackson"
+                },
+                {
+                    "text": "popular"
+                }
+            ]
+        }
+    ]
+}

@@ -5,6 +5,7 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import NaturalLanguageUnderstandingV1
 from ibm_watson.natural_language_understanding_v1 import Features, KeywordsOptions
 from Robos import stateRobot
+import random
 
 
 # Retorna o conteudo do Wikipedia
@@ -15,7 +16,7 @@ async def fetchContentFromWiki(content):
         client = Algorithmia.client(dados["Algorithmia"])
     wikiAlgorithm = client.algo('web/WikipediaParser/0.1.2')
     wikiAlgorithm.set_options(timeout=300)
-    wikiContent =wikiAlgorithm.pipe(entrada).result
+    wikiContent = wikiAlgorithm.pipe(entrada).result
     return wikiContent['content']
 
 
@@ -64,8 +65,9 @@ async def fethWatsonAndReturnKeywords(doc):
         authenticator=authenticator
     )
     natural_language_understanding.set_service_url(watson_URL)
+    #result = random.sample(range(0,len(doc)), 7)
     keyInformation = []
-    for index in range(5):
+    for index in range(7):
         response = natural_language_understanding.analyze(
             text=doc[index]['Sentence'],
             features=Features(keywords=KeywordsOptions(sentiment=False, emotion=False, limit=10)),
@@ -79,9 +81,11 @@ async def fethWatsonAndReturnKeywords(doc):
 # Ativa o robo de texto
 async def ActivateTextBoot():
     content = stateRobot.load()
+
     bruteVar = await fetchContentFromWiki(content=content["SeachTerm"])
     cleanVar = sanitizeContent(bruteVar=bruteVar)
     doc = breakContentIntoSentences(cleanVar=cleanVar)
     keyInformation = await fethWatsonAndReturnKeywords(doc=doc)
     content['Informations'] = keyInformation
+
     stateRobot.save(content=content)
